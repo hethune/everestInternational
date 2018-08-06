@@ -31,7 +31,7 @@ function uploadFile(file) {
   const localFile = path.resolve(staticPath, file);
   const formUploader = new qiniu.form_up.FormUploader(config);
   const putExtra = new qiniu.form_up.PutExtra();
-  const key = `everest/static/${file}`;
+  const key = `everestInternational/static/${file}`;
 
   console.log(`Uploading ${file} to qiniu...`);
   formUploader.putFile(uploadToken, key, localFile, putExtra,

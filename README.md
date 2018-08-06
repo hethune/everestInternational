@@ -1,4 +1,4 @@
-# wehome-website
+# wehome-international
 
 > A Vue.js project
 
@@ -54,29 +54,5 @@ yarn build
 
 # upload all assets
 yarn upload
-
-```
-
-## Nginx
-```
-server {
-  listen 443 ssl; # managed by Certbot
-  server_name www.everest.com;
-  root /var/www/everest;
-
-
-  access_log /var/log/nginx/www.everest.access.log;
-  error_log /var/log/nginx/www.everest.error.log debug;
-
-  location / {
-    root /var/www/everest;
-    index index.html;
-    try_files $uri $uri/ /index.html;
-  }
-
-  include snippets/ssl-params.conf;
-  ssl_certificate /etc/letsencrypt/live/everest.com/fullchain.pem; # managed by Certbot
-  ssl_certificate_key /etc/letsencrypt/live/everest.com/privkey.pem; # managed by Certbot
-}
 
 ```

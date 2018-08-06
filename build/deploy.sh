@@ -27,20 +27,3 @@ yarn upload
 
 # soff
 
-############## h5.fangpinduo.com ##############
-
-# scp -r dist/ --exclude static/ jiale@116.62.226.159:/tmp/
-
-# ssh jiale@116.62.226.159 << soff
-
-# sudo su
-
-# mv -rf /tmp/dist/ /srv/everestWebsite/
-
-# sudo chown -R /srv/everestWebsite/dist/ deploy
-
-# exit
-
-# exit
-
-# soff

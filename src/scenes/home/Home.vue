@@ -5,7 +5,7 @@
         <h1 data-w-id="f8241c8d-9f78-ebfa-805f-ca9c23924e60" class="heading-5" data-ix="fade-in-bottom-page-loads">Discover The Future of Real Estate</h1>
         <p class="paragraph-4" data-ix="fade-in-bottom-page-loads">World&#x27;s First US Real Estate Equity Trading Platform.<br>Join now and become pioneers of richness.<br>‍</p>
         <div class="sign-up-form w-form">
-          <form name="wf-form-signup-form" data-name="Signup Form" data-redirect="/success" method="get" class="form-7 w-clearfix"><input type="email" name="email" data-name="Email" placeholder="Enter your email address" maxlength="256" required="" class="field w-input" v-model="email"><input type="submit" value="Get an invite" data-wait="Please wait..." class="button-6 w-button"></form>
+          <form name="wf-form-signup-form" data-name="Signup Form" class="form-7 w-clearfix" @submit.prevent="postEmail"><input type="email" name="email" data-name="Email" placeholder="Enter your email address" maxlength="256" required="" class="field w-input" v-model="email"><input type="submit" value="Get an invite" data-wait="Please wait..." class="button-6 w-button"></form>
           <div class="success-message-3 w-form-done">
             <p>Thanks! You&#x27;ll be the first to know.</p>
             <p class="spread-word">Help spread the word!</p>
@@ -363,7 +363,7 @@
     <div class="section-22">
       <h5 class="heading-36">Coming to you Fall 2018, Join our waiting list </h5>
       <div class="sign-up-form w-form">
-        <form name="wf-form-signup-form" data-name="Signup Form" data-redirect="/success" method="get" class="form-7 w-clearfix"><input type="email" name="email" data-name="Email" placeholder="Enter your email address" maxlength="256" required="" class="field w-input"><input type="submit" value="Get an invite" data-wait="Please wait..." class="button-6 w-button"></form>
+        <form name="wf-form-signup-form" data-name="Signup Form" class="form-7 w-clearfix" @submit.prevent="postEmail"><input type="email" name="email" data-name="Email" placeholder="Enter your email address" maxlength="256" required="" class="field w-input"><input type="submit" value="Get an invite" data-wait="Please wait..." class="button-6 w-button"></form>
         <div class="success-message-3 w-form-done">
           <p>Thanks! You&#x27;ll be the first to know.</p>
           <p class="spread-word">Help spread the word!</p>
@@ -395,7 +395,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import Track from "@/track";
 import { track, after } from "trackpoint-tools";
 
 export default {
@@ -426,14 +426,16 @@ export default {
     )
     postEmail: function () {
       const that = this
-      this.$auth.postEmail(this.email, {
-        success: function (response) {
-          router.push({ path: that.redirect })
-        },
-        error: function (error) {
-          console.log(error)
-        }
-      })
+      console.log('sssss');
+      
+      // this.$auth.postEmail(this.email, {
+      //   success: function (response) {
+      //     router.push({ path: that.redirect })
+      //   },
+      //   error: function (error) {
+      //     console.log(error)
+      //   }
+      // })
     }
   },
   mounted() {

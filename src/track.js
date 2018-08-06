@@ -13,7 +13,7 @@ export default {
     data.time_stamp = Date.now()
     data.id = uuid()
     data.type='event'
-    data.client= is_weixin()? "h5service" : "website"
+    data.client= "website-international"
     if (localStorage.getItem('wehome-everest')) {
       data.token = JSON.parse(localStorage.getItem('wehome-everest'))['auth']['accessToken']
     }
@@ -29,11 +29,10 @@ export default {
     })
   },
   routeTrack: function (data) {
-    const isWeixin = is_weixin()
     data.ua = platForm()
     data.time_stamp = Date.now()
     data.type = 'path'
-    data.client = isWeixin ? "h5service" : "website"
+    data.client = "website-international"
     console.log(data,'router')
     if(window.location.hostname=='localhost') return;
     Axios.post('/api/user/track', data, {
