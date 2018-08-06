@@ -16,3 +16,13 @@ selenium-debug.log
 *.njsproj
 *.sln
 .env
+
+
+#blog
+/hexo-hiker/.DS_Store
+/hexo-hiker/Thumbs.db
+/hexo-hiker/db.json
+/hexo-hiker/*.log
+/hexo-hiker/node_modules/
+/hexo-hiker/public/
+/hexo-hiker/.deploy*/

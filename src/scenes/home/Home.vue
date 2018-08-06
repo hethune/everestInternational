@@ -384,8 +384,8 @@
             <span>Submit email success</span>
         </p>
         <div style="text-align:center">
-            <p>After this task is deleted, the downstream 10 tasks will not be implemented.</p>
-            <p>Will you delete it?</p>
+            <p>Thank you for your interest in WeHome. </p>
+            <p>Our customer service team will contact you with further information within the next 24 hours, please pay close attention to our email.</p>
         </div>
         <div slot="footer">
             <Button type="success" size="large" long @click="closeModal">Ok</Button>
@@ -403,7 +403,7 @@ export default {
   data() {
     return {
       email: '',
-      modal: false,
+      modal: true,
       transfer: true
     };
   },

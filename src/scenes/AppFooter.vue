@@ -5,11 +5,35 @@
         <div class="column-35 w-col w-col-3"><img src="@/assets/images/logo-10.png" width="120" srcset="@/assets/images/logo-10-p-500.png 500w, @/assets/images/logo-10-p-800.png 800w, @/assets/images/logo-10-p-1080.png 1080w, @/assets/images/logo-10.png 2094w" sizes="(max-width: 479px) 100vw, 120px">
           <p class="paragraph-18"><br>Maximize your profit, Minimize your cost.</p>
         </div>
-        <div class="column-18 w-col w-col-5">
-          <h5 class="heading-17">Products</h5><a href="#" class="footer-link">Property Investment</a><a href="#" class="footer-link">Property Management</a></div>
+        <div class="column-18 w-col w-col-5"></div>
         <div class="column-19 w-col w-col-2">
-          <div class="div-block-11"><a href="#" class="social-icon-link w-inline-block"><img src="@/assets/images/social-03.svg" width="20"></a><a href="#" class="social-icon-link w-inline-block"><img src="@/assets/images/social-18.svg" width="20"></a><a href="#" class="social-icon-link w-inline-block"><img src="@/assets/images/social-09.svg" width="20"></a><a href="#" class="social-icon-link w-inline-block"><img src="@/assets/images/social-06.svg" width="20"></a></div><a href="https://twitter.com/WeHomeio" target="_blank" class="link-block w-inline-block"><img src="@/assets/images/twitter-white.svg" width="34" class="image-38"></a><a href="https://www.facebook.com/Wehomeio-1811463875783319/?ref=bookmarks" target="_blank" class="link-block-2 w-inline-block"><img src="@/assets/images/facebook-s-white.svg" width="24" class="image-36"></a><a href="https://twitter.com/WeHomeInvest" target="_blank" class="link-block-3 w-inline-block"><img src="@/assets/images/social-07-white.svg" width="24" class="image-35"></a>
-          <h5 class="heading-15">About</h5><a href="#" class="footer-link">Contact us</a><a href="#" class="footer-link">FAQ</a></div>
+          <!-- <div class="div-block-11">
+            <a href="#" class="social-icon-link w-inline-block">
+              <img src="@/assets/images/social-03.svg" width="20">
+            </a>
+            <a href="#" class="social-icon-link w-inline-block">
+              <img src="@/assets/images/social-18.svg" width="20">
+            </a>
+            <a href="#" class="social-icon-link w-inline-block">
+              <img src="@/assets/images/social-09.svg" width="20">
+            </a>
+            <a href="#" class="social-icon-link w-inline-block">
+              <img src="@/assets/images/social-06.svg" width="20">
+            </a>
+          </div> -->
+          <a href="https://twitter.com/WeHomeio" target="_blank" class="link-block w-inline-block">
+          <img src="@/assets/images/twitter-white.svg" width="34" class="image-38">
+          </a>
+          <a href="https://www.facebook.com/Wehomeio-1811463875783319/?ref=bookmarks" target="_blank" class="link-block-2 w-inline-block">
+          <img src="@/assets/images/facebook-s-white.svg" width="24" class="image-36">
+          </a>
+          <a href="https://wehome.io/en/blog/" target="_blank" class="link-block-3 w-inline-block">
+          <img src="@/assets/images/blog.svg" width="24" class="image-35">
+          </a>
+          <!-- <h5 class="heading-15">About</h5>
+          <a href="#" class="footer-link">Contact us</a>
+          <a href="#" class="footer-link">FAQ</a> -->
+        </div>
         <div class="column-20 w-col w-col-2">
           <h5 class="heading-16">Copyright © WeHome 2018</h5>
         </div>
