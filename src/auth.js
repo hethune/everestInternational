@@ -24,7 +24,7 @@ const WECHATOAUTH_LOGIN = '/api/web/login'
 
 const WECHATOAUTH_URL = '/api/web/wx_auth'
 
-const POST_EMAIL = ''
+const POST_EMAIL = '/api/post/subscibe'
 
 /**
 * Auth Plugin

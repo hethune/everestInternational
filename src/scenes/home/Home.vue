@@ -379,16 +379,16 @@
       </div>
     </div>
     <Modal v-model="modal" width="360" :transfer="transfer" class-name="modal-vertical-center">
-        <p slot="header" style="color:#42b983;text-align:center">
-            <Icon type="ios-checkmark-circle" />
-            <span>Submit email success</span>
+        <p slot="header" :style="{'color':emailStatus?'#42b983':'#f60','text-align': 'center'}">
+            <Icon :type="emailStatus?'ios-checkmark-circle':'ios-information-circle'"/>
+            <span>{{emailStatus?'Submit email success':'Error submit'}}</span>
         </p>
         <div style="text-align:center">
             <p>Thank you for your interest in WeHome. </p>
             <p>Our customer service team will contact you with further information within the next 24 hours, please pay close attention to our email.</p>
         </div>
         <div slot="footer">
-            <Button type="success" size="large" long @click="closeModal">Ok</Button>
+            <Button :type="emailStatus?'success':'error'" size="large" long @click="closeModal">Ok</Button>
         </div>
     </Modal>
   </div>
@@ -403,8 +403,9 @@ export default {
   data() {
     return {
       email: '',
-      modal: true,
-      transfer: true
+      modal: false,
+      transfer: true,
+      emailStatus: true
     };
   },
   methods: {
@@ -426,16 +427,17 @@ export default {
     )
     postEmail: function () {
       const that = this
-      console.log('sssss');
-      
-      // this.$auth.postEmail(this.email, {
-      //   success: function (response) {
-      //     router.push({ path: that.redirect })
-      //   },
-      //   error: function (error) {
-      //     console.log(error)
-      //   }
-      // })
+      this.$auth.postEmail(this.email, {
+        success: function (response) {
+          that.emailStatus = true
+          that.modal = true
+        },
+        error: function (error) {
+          console.log(error)
+          that.emailStatus = false
+          that.modal = true
+        }
+      })
     }
   },
   mounted() {
