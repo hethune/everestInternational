@@ -68,10 +68,9 @@ cd hexo-hiker
 yarn
 
 # clone hexo theme [hiker]
-
 git clone https://github.com/iTimeTraveler/hexo-theme-hiker.git themes/hiker
 
-# serve with hot reload at localhost:8080
-sudo hexo s
+# serve with hot reload at localhost:3996
+pm2 start app.js
 
 ```

@@ -1,9 +1,14 @@
-const { exec } = require('child_process')
-exec('hexo server -d',(error, stdout, stderr) => {
-        if(error){
-                console.log('exec error: ${error}')
-                return
-        }
-        console.log('stdout: ${stdout}');
-        console.log('stderr: ${stderr}');
-})
+var spawn = require('child_process').spawn;
+free = spawn('hexo', ['server', '-p 3996' ,'-d']);
+
+free.stdout.on('data', function (data) {
+console.log('standard output:\n' + data);
+});
+
+free.stderr.on('data', function (data) {
+console.log('standard error output:\n' + data);
+});
+
+free.on('exit', function (code, signal) {
+console.log('child process eixt ,exit:' + code);
+});
