@@ -19,35 +19,13 @@ ssh jiale@47.91.242.96 << soff
 
 sudo su
 
-mv -f /tmp/dist.zip /srv/everestWebsite/
+mv -f /tmp/dist.zip /srv/everestInternational/
 
-unzip -o /srv/everestWebsite/dist.zip -d /srv/everestWebsite
+unzip -o /srv/everestInternational/dist.zip -d /srv/everestInternational
 
-chown -R deploy /srv/everestWebsite/dist 
+chown -R deploy /srv/everestInternational/dist 
 
-rm -f /srv/everestWebsite/dist.zip
-
-exit
-
-exit
-
-soff
-
-############## h5.fangpinduo.com ##############
-
-scp dist.zip jiale@116.62.226.159:/tmp/
-
-ssh jiale@116.62.226.159 << soff
-
-sudo su
-
-mv -f /tmp/dist.zip /srv/everestWebsite/
-
-unzip -o /srv/everestWebsite/dist.zip -d /srv/everestWebsite
-
-chown -R deploy /srv/everestWebsite/dist 
-
-rm -f /srv/everestWebsite/dist.zip
+rm -f /srv/everestInternational/dist.zip
 
 exit
 

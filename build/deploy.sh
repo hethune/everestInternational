@@ -17,9 +17,9 @@ yarn upload
 
 # sudo su
 
-# mv -rf /tmp/dist/ /srv/everestWebsite/
+# mv -rf /tmp/dist/ /srv/everestInternational/
 
-# sudo chown -R /srv/everestWebsite/dist/ deploy
+# sudo chown -R /srv/everestInternational/dist/ deploy
 
 # exit
 

@@ -24,7 +24,7 @@ const WECHATOAUTH_LOGIN = '/api/web/login'
 
 const WECHATOAUTH_URL = '/api/web/wx_auth'
 
-const POST_EMAIL = '/api/post/subscibe'
+const POST_EMAIL = '/api/post/subscribe'
 
 /**
 * Auth Plugin
@@ -44,10 +44,8 @@ export default {
 
     return Axios.post(POST_EMAIL, params, {
       success: function (result) {
-        if (result.status && callbacks.success) {
+        if (callbacks.success) {
           callbacks.success(result)
-        } else if (!result.status && callbacks.error) {
-          callbacks.error(result)
         }
       },
       error: function (error) {

@@ -363,7 +363,7 @@
     <div class="section-22">
       <h5 class="heading-36">Coming to you Fall 2018, Join our waiting list </h5>
       <div class="sign-up-form w-form">
-        <form name="wf-form-signup-form" data-name="Signup Form" class="form-7 w-clearfix" @submit.prevent="postEmail"><input type="email" name="email" data-name="Email" placeholder="Enter your email address" maxlength="256" required="" class="field w-input"><input type="submit" value="Get an invite" data-wait="Please wait..." class="button-6 w-button"></form>
+        <form name="wf-form-signup-form" data-name="Signup Form" class="form-7 w-clearfix" @submit.prevent="postEmail"><input type="email" name="email" data-name="Email" placeholder="Enter your email address" maxlength="256" required="" class="field w-input" v-model="email"><input type="submit" value="Get an invite" data-wait="Please wait..." class="button-6 w-button"></form>
         <div class="success-message-3 w-form-done">
           <p>Thanks! You&#x27;ll be the first to know.</p>
           <p class="spread-word">Help spread the word!</p>
@@ -428,9 +428,14 @@ export default {
     postEmail: function () {
       const that = this
       this.$auth.postEmail(this.email, {
-        success: function (response) {
-          that.emailStatus = true
-          that.modal = true
+        success: function (res) {
+          if(res.success) {
+            that.emailStatus = true
+            that.modal = true
+          } else {
+            that.emailStatus = false
+            that.modal = true
+          }
         },
         error: function (error) {
           console.log(error)
