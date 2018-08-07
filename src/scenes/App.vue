@@ -25,7 +25,7 @@ export default {
   },
   created () {
     const ckeditor = document.createElement('script')
-    ckeditor.setAttribute('src', '/static/webflow.js')
+    ckeditor.setAttribute('src', 'https://wechat-pics.fangpinduo.com/wehome/everestInternational/webflow.js')
     document.body.appendChild(ckeditor)
   }
 }

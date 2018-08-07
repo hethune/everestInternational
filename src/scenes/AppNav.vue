@@ -4,8 +4,8 @@
       <div class="container-24 w-container">
         <div class="w-nav-overlay" :class="{'open': openNav,'close': !openNav}" @click="toggleNav">
           <nav role="navigation" class="w-nav-menu w-open-vue mine-onle-mobille">
-            <router-link to="/" class="nav-link-5 top w-nav-link" :class="{'w--current':$route.name=='home'}">Home</router-link>
-            <router-link :to="{path:'/about'}" class="nav-link-7 top w-nav-link" :class="{'w--current':$route.name=='about'}">About us</router-link>
+            <router-link to="/" class="nav-link-5 top w-nav-link" :class="{'w--current':$route.path=='/'}">Home</router-link>
+            <router-link :to="{path:'/about'}" class="nav-link-7 top w-nav-link" :class="{'w--current':$route.path=='/about'}">About us</router-link>
           </nav>
         </div>
 
@@ -13,8 +13,8 @@
           <img src="@/assets/images/logo-10.png" width="120" srcset="@/assets/images/logo-10-p-500.png 500w, @/assets/images/logo-10-p-800.png 800w, @/assets/images/logo-10-p-1080.png 1080w, @/assets/images/logo-10.png 2094w" sizes="(max-width: 479px) 83vw, 120px" class="image-28">
         </router-link>
         <nav role="navigation" class="w-nav-menu">
-          <router-link to="/" class="nav-link-5 w-nav-link" :class="{'w--current':$route.name=='home'}">Home</router-link>
-          <router-link :to="{path:'/about'}" class="nav-link-7 w-nav-link" :class="{'w--current':$route.name=='about'}">About us</router-link>
+          <router-link to="/" class="nav-link-5 w-nav-link" :class="{'w--current':$route.path=='/'}">Home</router-link>
+          <router-link :to="{path:'/about'}" class="nav-link-7 w-nav-link" :class="{'w--current':$route.path=='/about'}">About us</router-link>
         </nav>
         <div class="menu-button-3 w-nav-button" :class="{'w--open': openNav}" @click="toggleNav">
           <div class="w-icon-nav-menu"></div>
@@ -41,7 +41,7 @@ export default {
           category: "mob-nav-toggle",
           action: "click",
           optLabel: "toggle",
-          page: this.$route.name,
+          page: this.$route.path,
           optValue: {
             openNav: this.openNav
           }
@@ -55,16 +55,18 @@ export default {
     }
   },
   mounted() {
+    console.log(this.$route,'routersdfsdfsdfsfs');
+    
   },
   computed: {
+    
   },
-  //  watch: {
-  //   '$route'(to,from) {
-  //     console.log(this.openNav,'watch');
+   watch: {
+    '$route'(to,from) {
+      console.log(to,from,'from');
       
-  //     this.openNav = false 
-  //   }
-  // }
+    }
+  }
 };
 </script>
 

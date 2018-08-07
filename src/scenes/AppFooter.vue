@@ -27,7 +27,7 @@
           <a href="https://www.facebook.com/Wehomeio-1811463875783319/?ref=bookmarks" target="_blank" class="link-block-2 w-inline-block">
           <img src="@/assets/images/facebook-s-white.svg" width="24" class="image-36">
           </a>
-          <a href="https://wehome.io/en/blog/" target="_blank" class="link-block-3 w-inline-block">
+          <a href="https://wehome.io/enblog/" target="_blank" class="link-block-3 w-inline-block">
           <img src="@/assets/images/blog.svg" width="24" class="image-35">
           </a>
           <!-- <h5 class="heading-15">About</h5>
@@ -60,7 +60,7 @@ export default {
           category: this.category,
           action: "click",
           optLabel: "href",
-          page: this.$route.name,
+          page: this.$route.path,
           optValue: {
             showMiniCode: this.showMiniCode
           }
@@ -76,7 +76,7 @@ export default {
           category: 'minicode-close-button',
           action: "click",
           optLabel: "button",
-          page: this.$route.name,
+          page: this.$route.path,
           optValue: {
             showMiniCode: this.showMiniCode
           }

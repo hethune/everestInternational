@@ -55,7 +55,7 @@ export default {
           category: "loginout-dropdown",
           action: "click",
           optLabel: "dropdown",
-          page: this.$route.name,
+          page: this.$route.path,
           optValue: {
             tabName: this.tabName
           }

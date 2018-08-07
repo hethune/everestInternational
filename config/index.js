@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: process.local == true ?'/':'https://wechat-pics.fangpinduo.com/everest/',
+    assetsPublicPath: process.local == true ?'/':'https://wechat-pics.fangpinduo.com/everestInternational/',
     /**
      * Source Maps
      */
