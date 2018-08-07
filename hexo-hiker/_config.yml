@@ -13,6 +13,9 @@ timezone:
 
 # hexo-admin authentification
 admin:
+  username: wehome
+  password_hash: $2a$10$lnXkWU/trSWZgHOhguhHp.P/aDsqpcwxYYbkZ.p8QF0LQHo4yMYc2
+  secret: wehome-admin
   deployCommand: './script/hexo-g.sh'
 
 # URL
