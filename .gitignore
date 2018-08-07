@@ -26,3 +26,6 @@ selenium-debug.log
 /hexo-hiker/node_modules/
 /hexo-hiker/public/
 /hexo-hiker/.deploy*/
+
+#themes/hiker
+/hexo-hiker/themes/node_modules/
