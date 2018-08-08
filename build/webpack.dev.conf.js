@@ -56,7 +56,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      title: 'WeHome | 海外房产股权投资平台',
+      title: 'WeHome | US real estate equity investment platform',
       inject: true
     }),
     // copy custom static assets

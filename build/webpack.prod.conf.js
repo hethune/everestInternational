@@ -70,6 +70,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         ? 'index.html'
         : config.build.index,
       template: 'index.html',
+      title: 'WeHome | US real estate equity investment platform',
       inject: true,
       minify: {
         removeComments: true,
